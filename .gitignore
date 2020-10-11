@@ -1,4 +1,3 @@
 ../venv/
 .idea/
 db.sqlite3
-p4backend/__pycache__/
