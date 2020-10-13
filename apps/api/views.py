@@ -234,4 +234,33 @@ class CollectionDetail(views.APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+class ArtistSearch(views.APIView):
 
+    permission_classes = (AllowAny,)
+    serializer_class = ArtistSerializer
+
+    def get(self, request, *args, **kwargs):
+        search_string = kwargs.get('search_string')
+        if search_string:
+            artists = Artist.objects.filter(name__icontains=search_string)
+            serializer = ArtistSerializer(artists, many=True)
+            print(artists)
+            return Response(serializer.data)
+
+class ArtistRecordsNotInCollection(views.APIView):
+
+    permission_classes = (IsAuthenticated,)
+    serializer_class = ArtistSerializer
+
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        artist = Artist.objects.get(pk=kwargs.get('artist_pk'))
+
+        serializer = ArtistSerializer({
+            'id': artist.id,
+            'name': artist.name,
+            'hot_100_hits': artist.hot_100_hits,
+            'records': filter(lambda record: record not in user.collection.records.all(), artist.records.all())
+        })
+
+        return Response(serializer.data)

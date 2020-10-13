@@ -1,0 +1,82 @@
+[
+  {
+    "model": "api.record",
+    "pk": 1,
+    "fields": {
+      "title": "3 Feet High and Rising",
+      "artist": 1,
+      "release_year": 1989,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/DeLaSoul3FeetHighandRisingalbumcover.jpg/220px-DeLaSoul3FeetHighandRisingalbumcover.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 2,
+    "fields": {
+      "title": "Private Eyes",
+      "artist": 2,
+      "release_year": 1981,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Hall_Oates_Private_Eyes.jpg/220px-Hall_Oates_Private_Eyes.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 3,
+    "fields": {
+      "title": "Ooh Yeah!",
+      "artist": 2,
+      "release_year": 1988,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Hall_Oates_Ooh_Yeah.jpg/220px-Hall_Oates_Ooh_Yeah.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 4,
+    "fields": {
+      "title": "In a Different Light",
+      "artist": 3,
+      "release_year": 1986,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/The_Bangles_-_Different_Light.jpg/220px-The_Bangles_-_Different_Light.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 5,
+    "fields": {
+      "title": "People's Instinctive Travels and the Paths of Rhythm",
+      "artist": 4,
+      "release_year": 1990,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/ATCQPeople%27sInstinctTravels.jpg/220px-ATCQPeople%27sInstinctTravels.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 6,
+    "fields": {
+      "title": "The Low End Theory",
+      "artist": 4,
+      "release_year": 1991,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/ATribeCalledQuestTheLowEndtheory.jpg/220px-ATribeCalledQuestTheLowEndtheory.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 7,
+    "fields": {
+      "title": "Whitney",
+      "artist": 5,
+      "release_year": 1987,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Whitney_Houston_-_Whitney_%28album%29.jpg/220px-Whitney_Houston_-_Whitney_%28album%29.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 8,
+    "fields": {
+      "title": "She's So Unusual",
+      "artist": 6,
+      "release_year": 1983,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/ShesSoUnusual1984.PNG/220px-ShesSoUnusual1984.PNG"
+    }
+  }
+]

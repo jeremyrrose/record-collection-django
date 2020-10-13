@@ -20,11 +20,13 @@ class ArtistSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'hot_100_hits', 'records')
 
 class CollectionSerializer(serializers.ModelSerializer):
-    records = RecordSerializer(many=True, read_only=True)
+    # records = RecordSerializer(many=True, read_only=True)
     record_ids = serializers.PrimaryKeyRelatedField(many=True, read_only=False, queryset=Record.objects.all(), source='records')
     owner = serializers.ReadOnlyField(source='owner.username')
     owner_id = serializers.ReadOnlyField(source='owner.id')
+    artists = ArtistSerializer(many=True, read_only=True)
+
 
     class Meta:
         model = Collection
-        fields = ('id', 'owner', 'owner_id', 'records', 'record_ids')
+        fields = ('id', 'owner', 'owner_id', 'artists', 'record_ids')

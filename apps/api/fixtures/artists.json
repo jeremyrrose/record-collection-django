@@ -1,0 +1,50 @@
+[
+  {
+    "model": "api.artist",
+    "pk": 1,
+    "fields": {
+      "name": "De La Soul",
+      "hot_100_hits": 3
+    }
+  },
+  {
+    "model": "api.artist",
+    "pk": 2,
+    "fields": {
+      "name": "Darryl Hall & John Oates",
+      "hot_100_hits": 34
+    }
+  },
+  {
+    "model": "api.artist",
+    "pk": 3,
+    "fields": {
+      "name": "The Bangles",
+      "hot_100_hits": 11
+    }
+  },
+  {
+    "model": "api.artist",
+    "pk": 4,
+    "fields": {
+      "name": "A Tribe Called Quest",
+      "hot_100_hits": 5
+    }
+  },
+  {
+    "model": "api.artist",
+    "pk": 5,
+    "fields": {
+      "name": "Whitney Houston",
+      "hot_100_hits": 23
+    }
+  },
+  {
+    "model": "api.artist",
+    "pk": 6,
+    "fields": {
+      "name": "Cyndi Lauper",
+      "hot_100_hits": 14
+    }
+  }
+]

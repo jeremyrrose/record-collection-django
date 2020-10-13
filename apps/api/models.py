@@ -33,6 +33,20 @@ class Collection(models.Model):
     def __str__(self):
         return f'Collection: Owner {self.owner.username}, {self.records.count()} records'
 
+    def get_artists(self):
+        artists = {}
+        for record in self.records.all():
+            if artists.get(record.artist.name):
+                artists[record.artist.name]['records'].append(record)
+            else:
+                artists[record.artist.name] = {}
+                artists[record.artist.name]['name'] = record.artist.name
+                artists[record.artist.name]['id'] = record.artist.id
+                artists[record.artist.name]['hot_100_hits'] = record.artist.hot_100_hits
+                artists[record.artist.name]['records'] = [record]
+        return sorted(artists.values(), key=lambda artist: artist['name'])
+
+    artists = property(fget=get_artists)
 
 # class Category(models.Model):
 #     class Meta:

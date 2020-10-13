@@ -26,7 +26,7 @@ SECRET_KEY = 'od(8$hepg)7325nvv%(tn#12o-%c%!+&6vp^7$u7mb_j77ymb^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  # for REST API
     'apps.authentication',  # for Auth
-    'apps.api'
+    'apps.api',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'p4backend.urls'
@@ -104,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'authentication.user'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Overriding DRF JWT settings
 JWT_AUTH = {

@@ -1,7 +1,7 @@
 from django.urls import path, include
 from django.conf.urls import url
 from rest_framework import routers
-from apps.api.views import BlankView, RecordViewset, ArtistViewset, CollectionDetail, CollectionViewset
+from apps.api.views import BlankView, RecordViewset, ArtistViewset, ArtistSearch, CollectionDetail, CollectionViewset, ArtistRecordsNotInCollection
 
 router = routers.DefaultRouter()
 router.register('records', RecordViewset, basename='records')
@@ -13,7 +13,9 @@ custom_urlpatterns = [
     # url(r'categories/(?P<category_pk>\d+)/recipes/$', CategoryRecipes.as_view(), name='category_recipes'),
     # url(r'categories/(?P<category_pk>\d+)/recipes/(?P<pk>\d+)$', SingleCategoryRecipe.as_view(), name='single_category_recipe'),
     url(r'tryingit/(?P<whatever>\d+)/and/(?P<dumb>\d+)$', BlankView, name="trying"),
-    url(r'collections/(?P<pk>\d+)$', CollectionDetail.as_view(), name="collection")
+    url(r'collections/(?P<pk>\d+)$', CollectionDetail.as_view(), name="collection"),
+    path(r'artist_search/<str:search_string>', ArtistSearch.as_view(), name="artist_search"),
+    url(r'addable/artist/(?P<artist_pk>\d+)/', ArtistRecordsNotInCollection.as_view(), name="addable_records_by_artist")
 ]
 
 urlpatterns = router.urls

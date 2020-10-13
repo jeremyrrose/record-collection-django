@@ -24,9 +24,11 @@ class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField(max_length=255)
     password = serializers.CharField(max_length=255, write_only=True)
     token = serializers.CharField(max_length=255, read_only=True)
+    user_id = serializers.ReadOnlyField()
+    collection_id = serializers.ReadOnlyField()
     class Meta:
         model = User
-        fields = ('username', 'email', 'password', 'token')
+        fields = ('username', 'email', 'password', 'token', 'collection_id', 'user_id')
     def validate(self, data):
         username = data.get('username', None)
         password = data.get('password', None)
@@ -42,6 +44,7 @@ class LoginSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'A password is required to login'
             )
+        print(username, password)
         user = authenticate(username=username, password=password)
         if user is None:
             raise serializers.ValidationError(
@@ -53,8 +56,10 @@ class LoginSerializer(serializers.ModelSerializer):
             )
         return {
             "username": user.username,
+            "user_id": user.id,
             "email": user.email,
-            "token": user.token
+            "token": user.token,
+            "collection_id": user.collection.id
         }
 
 class UserListSerializer(serializers.ModelSerializer):
