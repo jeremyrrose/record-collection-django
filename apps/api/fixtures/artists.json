@@ -46,5 +46,37 @@
       "name": "Cyndi Lauper",
       "hot_100_hits": 14
     }
+  },
+  {
+    "model": "api.artist",
+    "pk": 7,
+    "fields": {
+      "name": "The Police",
+      "hot_100_hits": 17
+    }
+  },
+    {
+    "model": "api.artist",
+    "pk": 8,
+    "fields": {
+      "name": "The Specials",
+      "hot_100_hits": 0
+    }
+  },
+    {
+    "model": "api.artist",
+    "pk": 9,
+    "fields": {
+      "name": "Bruce Springsteen",
+      "hot_100_hits": 29
+    }
+  },
+    {
+    "model": "api.artist",
+    "pk": 10,
+    "fields": {
+      "name": "The Outfield",
+      "hot_100_hits": 1
+    }
   }
 ]

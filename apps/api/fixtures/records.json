@@ -78,5 +78,45 @@
       "release_year": 1983,
       "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/ShesSoUnusual1984.PNG/220px-ShesSoUnusual1984.PNG"
     }
+  },
+  {
+    "model": "api.record",
+    "pk": 9,
+    "fields": {
+      "title": "Synchronicity",
+      "artist": 7,
+      "release_year": 1983,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Police-album-synchronicity.jpg/220px-Police-album-synchronicity.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 9,
+    "fields": {
+      "title": "The Specials",
+      "artist": 8,
+      "release_year": 1979,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/9/94/Specials_uk_front.jpg"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 10,
+    "fields": {
+      "title": "Born in the U.S.A.",
+      "artist": 9,
+      "release_year": 1984,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/31/BruceBorn1984.JPG/220px-BruceBorn1984.JPG"
+    }
+  },
+  {
+    "model": "api.record",
+    "pk": 11,
+    "fields": {
+      "title": "Play Deep",
+      "artist": 10,
+      "release_year": 1985,
+      "cover_image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Play_Deep_cover.jpg/220px-Play_Deep_cover.jpg"
+    }
   }
 ]
